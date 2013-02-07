@@ -499,8 +499,8 @@ public class ConnectingTask extends Thread {
      */
     public int getVersionCode() {
         try {
-            PackageInfo info =
-                    context.getPackageManager().getPackageInfo(context.getPackageName(), 0);
+            String packageName = context.getPackageName();
+            PackageInfo info =context.getPackageManager().getPackageInfo(packageName, 0);
             return info.versionCode;
         } catch (NameNotFoundException e) {
             Log.d(LOG_TAG, "cannot retrieve version number, package name not found");

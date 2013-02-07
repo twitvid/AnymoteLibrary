@@ -16,3 +16,4 @@ gen-external-apklibs/
 project.properties
 buildNumber.properties
 atlassian-ide-plugin.xml
+.idea

@@ -146,13 +146,10 @@ public class AnymoteClientService extends Service implements ConnectionListener 
             return;
         }
 
-        Intent intent2 = new Intent();
-        intent2.setComponent(new ComponentName(
-                getApplicationContext(),
-                "com.example.google.tv.anymotelibrary.connection.PairingActivity"));
-        intent2.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
-        getApplication().startActivity(intent2);
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName(getApplicationContext(), PairingActivity.class.getName()));
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        getApplication().startActivity(intent);
     }
 
     /**

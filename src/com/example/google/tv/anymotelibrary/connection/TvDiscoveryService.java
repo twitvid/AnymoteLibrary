@@ -225,8 +225,6 @@ public class TvDiscoveryService extends Handler {
      * Internal Looper thread that does the discovery
      */
     private class DiscoveryLooper extends Thread {
-        public Handler mHandler;
-
         @Override
         public void run() {
             startBroadcast();
@@ -234,7 +232,6 @@ public class TvDiscoveryService extends Handler {
                 devices = null;
                 return;
             }
-
         }
     }
 
